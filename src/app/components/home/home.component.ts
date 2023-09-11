@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { housingData } from 'src/app/data/fakeData';
 import { HousingLocation } from 'src/app/interfaces/housing-location';
 
 @Component({
@@ -7,16 +8,6 @@ import { HousingLocation } from 'src/app/interfaces/housing-location';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  readonly baseUrl: string = 'https://angular.io/assets/images/tutorials/faa';
+  data: HousingLocation[] = housingData;
 
-  housingLocation: HousingLocation = {
-    id: 9999,
-    name: 'Test home',
-    city: 'Test city',
-    state: 'ST',
-    photo: 'someurl.com',
-    availableUnits: 99,
-    wifi: true,
-    laundry: false
-  };
 }

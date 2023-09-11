@@ -7,5 +7,5 @@ import { HousingLocation } from 'src/app/interfaces/housing-location';
   styleUrls: ['./housing-location.component.css']
 })
 export class HousingLocationComponent {
-  @Input() housingLocation!: HousingLocation;
+  @Input() houseInfo!: HousingLocation;
 }
