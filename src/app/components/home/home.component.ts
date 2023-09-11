@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { housingData } from 'src/app/data/fakeData';
+import { Component, inject } from '@angular/core';
 import { HousingLocation } from 'src/app/interfaces/housing-location';
+import { HousingService } from 'src/app/services/housing.service';
 
 @Component({
   selector: 'app-home',
@@ -8,6 +8,10 @@ import { HousingLocation } from 'src/app/interfaces/housing-location';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  data: HousingLocation[] = housingData;
+  data: HousingLocation[] = [];
+  housingService: HousingService = inject(HousingService);
 
+  constructor() {
+    this.data = this.housingService.getAllHouses();
+  }
 }
