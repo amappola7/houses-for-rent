@@ -6,7 +6,7 @@
             <fa-icon class="house-info__location-icon" [icon]="locationIcon"></fa-icon>
             <p class="house-info__location-info">{{houseInfo.city}}, {{houseInfo.state}}</p>
         </span>
-        <a class="house-info__learn-more-link" href="">Learn More</a>
+        <a class="house-info__learn-more-link" routerLink="/details/{{houseInfo.id}}">Learn More</a>
     </div>
 
 </section>
