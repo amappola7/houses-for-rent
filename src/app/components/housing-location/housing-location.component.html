@@ -1,6 +1,12 @@
-<section>
-    <img [src]="houseInfo.photo" alt="Exterior photo of {{houseInfo.name}}">
-    <h2>{{houseInfo.name}}</h2>
-    <span>📍<p>{{houseInfo.city}}, {{houseInfo.state}}</p></span>
-    <a href="">Learn More</a>
+<section class="house-info">
+    <img class="house-info__photo" [src]="houseInfo.photo" alt="Exterior photo of {{houseInfo.name}}">
+    <div class="house-info__container">
+        <h2 class="house-info__name">{{houseInfo.name}}</h2>
+        <span class="house-info__location">
+            <fa-icon class="house-info__location-icon" [icon]="locationIcon"></fa-icon>
+            <p class="house-info__location-info">{{houseInfo.city}}, {{houseInfo.state}}</p>
+        </span>
+        <a class="house-info__learn-more-link" href="">Learn More</a>
+    </div>
+
 </section>

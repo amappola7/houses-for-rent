@@ -1,5 +1,14 @@
+:root {
+    --primary-color: #605dc8;
+    --secondary-color: #8b89e6;
+    --background-color: #e8e7fa;
+    --hover-color: #E8E8E8;
+    --grey: #ffffff;
+}
+
 html {
     font-size: 10px;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
 
 * {
