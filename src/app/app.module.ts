@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { HousingLocationComponent } from './components/housing-location/housing-location.component';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { DetailsComponent } from './components/details/details.component';
-import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     FontAwesomeModule,
     AppRoutingModule
   ],

@@ -13,5 +13,14 @@
             <p>Does this location have laundry: {{houseData?.laundry ? "Yes" : "No"}}</p>
         </div>
         <h3>Apply now to live here</h3>
+        <form class="house-details__application-form" [formGroup]="applicationForm" (submit)="submitApplication()">
+            <label for="first-name">First Name</label>
+            <input type="text" formControlName="firstName" id="first-name">
+            <label for="last-name">Last Name</label>
+            <input type="text" formControlName="lastName" id="last-name">
+            <label for="email">Email</label>
+            <input type="email" formControlName="email" id="email">
+            <button class="btn" type="submit">Apply now</button>
+        </form>
     </article>
 </section>
