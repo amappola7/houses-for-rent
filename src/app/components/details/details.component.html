@@ -1,26 +1,26 @@
 <section class="house-details__container">
-    <img class="house-details__image" src="{{houseData?.photo}}" alt="Exterior photo of {{'HOUSE'}}"/>
     <article class="house-details__content">
         <h2 class="house-details__name">{{houseData?.name}}</h2>
         <span class="house-details__location">
             <fa-icon class="house-details__location-icon" [icon]="locationIcon"></fa-icon>
             <p class="house-details__location-info">{{houseData?.city}}, {{houseData?.state}}</p>
         </span>
-        <h3>About this housing location</h3>
+        <h3 class="subtitle-type1">About this housing location</h3>
         <div class="house-details__information">
             <p>Units available: {{houseData?.availableUnits}}</p>
             <p>Does this location have wifi: {{houseData?.wifi ? "Yes" : "No"}}</p>
             <p>Does this location have laundry: {{houseData?.laundry ? "Yes" : "No"}}</p>
         </div>
-        <h3>Apply now to live here</h3>
+        <h3 class="subtitle-type2">Apply now to live here</h3>
         <form class="house-details__application-form" [formGroup]="applicationForm" (submit)="submitApplication()">
-            <label for="first-name">First Name</label>
+            <label for="first-name">FIRST NAME</label>
             <input type="text" formControlName="firstName" id="first-name">
-            <label for="last-name">Last Name</label>
+            <label for="last-name">LAST NAME</label>
             <input type="text" formControlName="lastName" id="last-name">
-            <label for="email">Email</label>
+            <label for="email">EMAIL</label>
             <input type="email" formControlName="email" id="email">
             <button class="btn" type="submit">Apply now</button>
         </form>
     </article>
+    <img class="house-details__image" src="{{houseData?.photo}}" alt="Exterior photo of {{'HOUSE'}}"/>
 </section>

@@ -1,0 +1,80 @@
+.house-details__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: calc(100vh - 6rem);
+    max-height: calc(100vh - 6rem);
+    padding: 2.5rem 1.2rem;
+    overflow: hidden;
+    background-color: var(--grey);
+}
+
+.house-details__content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.house-details__name {
+    font-size: 6.4rem;
+}
+
+.house-details__location {
+    display: flex;
+    gap: 0.8rem;
+    font-size: 3.2rem;
+}
+
+.house-details__location-icon {
+    font-size: 2.8rem;
+    color: var(--primary-color);
+}
+
+.subtitle-type1 {
+    font-size: 3.2rem;
+    color: var(--secondary-color);
+}
+
+.house-details__information {
+    font-size: 1.8rem;
+}
+
+.subtitle-type2 {
+    font-size: 2.4rem;
+}
+
+.house-details__application-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.house-details__application-form input {
+    height: 4.5rem;
+    margin-bottom: 1.4rem;
+    padding: 0 1.2rem;
+    font-size: 2rem;
+    border: none;
+    border-bottom: 0.1rem solid black;
+}
+
+.btn {
+    width: fit-content;
+    height: 4rem;
+    padding: 0 1rem;
+    border: 0.1rem solid var(--primary-color);
+    border-radius: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.house-details__image {
+    align-self: center;
+    width: 82rem;
+    height: 60rem;
+    object-fit: cover;
+    border-radius: 4rem;
+}
