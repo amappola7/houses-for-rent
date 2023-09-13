@@ -5,7 +5,7 @@ import { housingData } from '../data/fakeData';
 @Injectable({
   providedIn: 'root'
 })
-export class HousingService {
+export class HousingStaticService {
   housesDataList: HousingLocation[] = housingData;
 
   getAllHouses(): HousingLocation[] {

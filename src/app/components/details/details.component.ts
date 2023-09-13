@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HousingService } from 'src/app/services/housing.service';
+import { HousingStaticService } from 'src/app/services/housing.-static.service';
 import { HousingLocation } from 'src/app/interfaces/housing-location';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -14,7 +14,7 @@ export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   housingLocationId = -1;
   locationIcon = faLocationDot;
-  housingService: HousingService = inject(HousingService);
+  housingService: HousingStaticService = inject(HousingStaticService);
   houseData: HousingLocation | undefined;
   applicationForm = new FormGroup({
     firstName: new FormControl(''),

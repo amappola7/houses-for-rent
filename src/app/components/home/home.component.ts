@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { HousingLocation } from 'src/app/interfaces/housing-location';
-import { HousingService } from 'src/app/services/housing.service';
+import { HousingStaticService } from 'src/app/services/housing.-static.service';
 
 @Component({
   selector: 'app-home',
@@ -9,7 +9,7 @@ import { HousingService } from 'src/app/services/housing.service';
 })
 export class HomeComponent {
   data: HousingLocation[] = [];
-  housingService: HousingService = inject(HousingService);
+  housingService: HousingStaticService = inject(HousingStaticService);
   filteredData: HousingLocation[] = [];
 
   constructor() {
