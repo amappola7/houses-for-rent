@@ -25,7 +25,7 @@ export class HomeComponent {
     })
   }
 
-  filterData(filterValue: string) {
-    return this.filteredData.filter(house => house?.city.toLowerCase().includes(filterValue.toLowerCase()));
+  filterData(filterValue: string): void {
+    this.filteredData = this.filteredData.filter(house => house?.city.toLowerCase().includes(filterValue.toLowerCase()));
   }
 }
