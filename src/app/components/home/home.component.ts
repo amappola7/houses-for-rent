@@ -10,8 +10,14 @@ import { HousingService } from 'src/app/services/housing.service';
 export class HomeComponent {
   data: HousingLocation[] = [];
   housingService: HousingService = inject(HousingService);
+  filteredData: HousingLocation[] = [];
 
   constructor() {
     this.data = this.housingService.getAllHouses();
+    this.filteredData = this.data;
+  }
+
+  filterData(filterValue: string) {
+    this.filteredData = this.housingService.filterData(filterValue);
   }
 }
