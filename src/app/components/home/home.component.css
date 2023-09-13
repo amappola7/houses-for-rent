@@ -1,3 +1,26 @@
+.home-search-filter {
+    padding: 1rem;
+}
+
+.home-search-filter input {
+    width: 47rem;
+    height: 4rem;
+    margin-right: 0.8rem;
+    padding-left: 1rem;
+    border: solid 0.1rem var(--primary-color);
+    border-radius: 0.8rem;
+}
+
+.btn {
+    width: fit-content;
+    height: 4rem;
+    padding: 0 1rem;
+    border: 0.1rem solid var(--primary-color);
+    border-radius: 0.8rem;
+    background-color: var(--primary-color);
+    color: white;
+}
+
 .home-houses-container {
     /* display: grid;
     grid-template-columns: repeat(4, 1fr); */
@@ -11,3 +34,4 @@
     padding: 1rem 3rem;
     overflow: hidden;
 }
+

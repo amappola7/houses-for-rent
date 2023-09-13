@@ -1,3 +1,7 @@
 header {
-    height: 6rem;
+    display: flex;
+    align-items: center;
+    height: 7rem;
+    padding-left: 1rem;
+    box-shadow: 0 0.1rem 1.2rem #bdbdbd;
 }
