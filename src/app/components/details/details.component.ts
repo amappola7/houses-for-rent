@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HousingStaticService } from 'src/app/services/housing.-static.service';
+import { HousingApiService } from 'src/app/services/housing-api.service';
+// import { HousingStaticService } from 'src/app/services/housing.-static.service';
 import { HousingLocation } from 'src/app/interfaces/housing-location';
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { FormGroup, FormControl } from '@angular/forms';
@@ -14,7 +15,8 @@ export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
   housingLocationId = -1;
   locationIcon = faLocationDot;
-  housingService: HousingStaticService = inject(HousingStaticService);
+  // housingService: HousingStaticService = inject(HousingStaticService); // ---> This service uses static data from fakeData.ts
+  housingService: HousingApiService = inject(HousingApiService); // This service uses data from the fake API
   houseData: HousingLocation | undefined;
   applicationForm = new FormGroup({
     firstName: new FormControl(''),
@@ -24,8 +26,12 @@ export class DetailsComponent {
 
   constructor() {
       this.housingLocationId = Number(this.route.snapshot.params['id']);
-      this.houseData = this.housingService.getHouseById(this.housingLocationId);
-  }
+      // this.houseData = this.housingService.getHouseById(this.housingLocationId); // ---> This property uses the HousingStaticService
+      this.housingService.getHouseById(this.housingLocationId)
+      .then((result: HousingLocation | undefined) => {
+          this.houseData = result;
+      })
+    }
 
   submitApplication() {
     this.housingService.submitApplicationForm(this.applicationForm.value.firstName ?? '', this.applicationForm.value.lastName ?? '', this.applicationForm.value.email ?? '');

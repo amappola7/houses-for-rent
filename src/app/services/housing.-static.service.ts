@@ -21,8 +21,6 @@ export class HousingStaticService {
   }
 
   filterData(filterValue: string) {
-    console.log("LISTA DE CASAS", this.housesDataList);
-    console.log("VALOR FILTRO", filterValue);
     return this.housesDataList.filter(house => house?.city.toLowerCase().includes(filterValue.toLowerCase()));
   }
 }
